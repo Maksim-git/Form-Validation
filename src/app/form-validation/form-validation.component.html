@@ -1,0 +1,28 @@
+<div class="main-wrapper">
+  <div class="main-wrapper__alignment">
+    <span class="form_header">Welcome</span>
+    <span class="form_company-name"><a class="form_company-link" href="#" target="_blank">A</a></span>
+    <form action="" class="form" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form_wrapper-email">
+        <input type="text" name="Email" placeholder="Email" class="form_input" formControlName = 'email'>
+        <div class="validation" *ngIf="form.get('email').invalid && form.get('email').touched">
+          <small *ngIf="form.get('email').errors.required">This field is required.</small>
+          <small *ngIf="form.get('email').errors.email">Entered email is not valid</small>
+        </div>
+      </div>
+      <div class="form_wrapper-email">
+        <input type="password" placeholder="Password" name="Password"  class="form_input" formControlName = 'password'>
+        <div class="validation" *ngIf="form.get('password').invalid && form.get('password').touched">
+          <small *ngIf="form.get('password').errors.required">This field is required.</small>
+          <small *ngIf="form.get('password').errors.minlength">The length cannot be less {{form.get('password').errors.minlength.requiredLength}}.</small>
+      </div>
+        <div class="validation"></div>
+      </div>
+      <button class="form_button" type="submit" [disabled]="form.invalid" >Login</button>
+    </form>
+    <div>
+      <span class="form_question-text">Don’t have an account?</span>
+      <a class="form_question-text" href="#"><b> Sign Up</b></a>
+    </div>
+  </div>
+</div>

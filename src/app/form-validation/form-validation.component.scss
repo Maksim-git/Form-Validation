@@ -1,0 +1,92 @@
+.main-wrapper{
+  min-width: 230px;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  padding: 10px 30px;
+  &__alignment{
+    max-width: 300px;
+    margin: 101px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 77px 55px 33px;
+    background-color: #fff;
+    box-shadow: 9px 8px 19px -3px rgb(0 0 0 / 49%);
+  }
+}
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &_header{
+    font-family: 'Poppins-Bold', sans-serif;
+    font-weight: bold;
+    padding-bottom: 26px;
+    font-size: 30px;
+  }
+  &_company-name{
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 40px;
+    margin: 0px 0px 30px;
+    background-color: #333;
+    padding: 1px 14px;
+    border-radius: 8px;
+  }
+  &_company-link{
+    color: white;
+    text-decoration: none;
+  }
+  &_wrapper-email{
+    padding: 0px 10px;
+    margin: 0px 0px 20px;
+  }
+  &_input{
+    border: 1px solid royalblue;
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &_button{
+    font-family: 'Poppins-Bold', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin: 0px 0px 90px 10px;
+    padding: 8px 60px;
+    border: none;
+    border-radius: 30px;
+    background: -webkit-linear-gradient(right, #67e3ff, #b45fde, #21d4fd, #db91ff);
+    &:hover{
+      background: -webkit-linear-gradient(right, #c5c5c5, #e5b2ff, #1ac8f0, #ffffff);
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+    }
+  }
+  &_question-text{
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+}
+
+input{
+  &.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+  &.ng-valid.ng-touched{
+    border: 1px solid green;
+  }
+}
+
+.validation{
+  color: red;
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 11px;
+}
+
